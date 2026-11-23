@@ -1,0 +1,7 @@
+loader/build/
+reports/functions.json
+reports/*-summary.json
+*.log
+__pycache__/
+*.pyc
+.vs/

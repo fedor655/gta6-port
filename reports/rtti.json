@@ -1,0 +1,1042 @@
+{
+ "type_descriptors": 209,
+ "locators": 92,
+ "classes": 92,
+ "roots": 92,
+ "names_sample": [
+  "PEAUXblContext::?$_Ref_count_resource_alloc",
+  "UXblAchievementsResult",
+  "UXblAchievementsResult::?$_Ref_count_obj_alloc3",
+  "UXblContext",
+  "UXblHttpCall",
+  "UXblHttpCall::?$_Ref_count_obj_alloc3",
+  "UXblPresenceRecord",
+  "UXblPresenceRecord::?$_Ref_count_obj_alloc3",
+  "V<lambda_017fd22074f220e1169877edf917dfc6>::U?$Callable",
+  "V<lambda_0aafb312c94b13bd4de4ff1776688567>::U?$Callable",
+  "V<lambda_180f5f3d0f681cf5c6f0bec967149b35>::U?$Callable",
+  "V<lambda_2544d62aedf660395f9e3e33df01e6a5>::?$_Func_impl_no_alloc",
+  "V<lambda_359ef47aa51528181330902119fa1007>::?$_Func_impl_no_alloc",
+  "V<lambda_3bbe68698a13db4865525d653972cef9>::U?$Callable",
+  "V<lambda_3ce5df2d6c588c5f4ed510e957083a64>::U?$Callable",
+  "V<lambda_53fd2ceff4d06ef12724e1dba7fc6525>::U?$Callable",
+  "V<lambda_5684e66f43f82214d86e325f4edf3f04>::U?$Callable",
+  "V<lambda_588c1e780597e442d81372824241c347>::?$_Func_impl_no_alloc",
+  "V<lambda_6df93bc849ff056cd66b493bc0560e63>::U?$Callable",
+  "V<lambda_76fbc518bfd8d29ca97dca6795a3e103>::?$_Func_impl_no_alloc"
+ ],
+ "classes_data": [
+  {
+   "name": "PEAUXblContext::?$_Ref_count_resource_alloc",
+   "mangled": ".?AV?$_Ref_count_resource_alloc@PEAUXblContext@@U?$Deleter@UXblContext@@@services@xbox@@U?$Allocator@UXblContext@@@34@@std@@",
+   "td_rva": 115350896,
+   "col_rva": 108481272,
+   "vftables": [
+    "0x146774af8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "UXblAchievementsResult",
+   "mangled": ".?AUXblAchievementsResult@@",
+   "td_rva": 115357984,
+   "col_rva": 108488904,
+   "vftables": [
+    "0x1467768c8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "UXblAchievementsResult::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@UXblAchievementsResult@@U?$Allocator@UXblAchievementsResult@@@services@xbox@@@std@@",
+   "td_rva": 115358112,
+   "col_rva": 108489160,
+   "vftables": [
+    "0x1467769c8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "UXblContext",
+   "mangled": ".?AUXblContext@@",
+   "td_rva": 115350768,
+   "col_rva": 108481016,
+   "vftables": [
+    "0x1467749f8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "UXblHttpCall",
+   "mangled": ".?AUXblHttpCall@@",
+   "td_rva": 115340640,
+   "col_rva": 108491464,
+   "vftables": [
+    "0x1467772c8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "UXblHttpCall::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@UXblHttpCall@@U?$Allocator@UXblHttpCall@@@services@xbox@@@std@@",
+   "td_rva": 115345776,
+   "col_rva": 108474016,
+   "vftables": [
+    "0x146772ea0"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "UXblPresenceRecord",
+   "mangled": ".?AUXblPresenceRecord@@",
+   "td_rva": 115359464,
+   "col_rva": 108490360,
+   "vftables": [
+    "0x146776e78"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "UXblPresenceRecord::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@UXblPresenceRecord@@U?$Allocator@UXblPresenceRecord@@@services@xbox@@@std@@",
+   "td_rva": 115359584,
+   "col_rva": 108490616,
+   "vftables": [
+    "0x146776f78"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_017fd22074f220e1169877edf917dfc6>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_017fd22074f220e1169877edf917dfc6>@@@?$Function@$$A6AXV?$Result@V?$shared_ptr@VHttpCall@services@xbox@@@std@@@services@xbox@@@Z@services@xbox@@",
+   "td_rva": 115357600,
+   "col_rva": 108488520,
+   "vftables": [
+    "0x146776748"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_0aafb312c94b13bd4de4ff1776688567>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_0aafb312c94b13bd4de4ff1776688567>@@@?$Function@$$A6AJW4XAsyncOp@@PEBUXAsyncProviderData@@@Z@services@xbox@@",
+   "td_rva": 115343728,
+   "col_rva": 108472592,
+   "vftables": [
+    "0x146772910"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_180f5f3d0f681cf5c6f0bec967149b35>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_180f5f3d0f681cf5c6f0bec967149b35>@@@?$Function@$$A6AXV?$Result@V?$shared_ptr@VHttpCall@services@xbox@@@std@@@services@xbox@@@Z@services@xbox@@",
+   "td_rva": 115361696,
+   "col_rva": 108493776,
+   "vftables": [
+    "0x146777bd0"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_2544d62aedf660395f9e3e33df01e6a5>::?$_Func_impl_no_alloc",
+   "mangled": ".?AV?$_Func_impl_no_alloc@V<lambda_2544d62aedf660395f9e3e33df01e6a5>@@_NH@std@@",
+   "td_rva": 115360672,
+   "col_rva": 108492328,
+   "vftables": [
+    "0x146777628"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_359ef47aa51528181330902119fa1007>::?$_Func_impl_no_alloc",
+   "mangled": ".?AV?$_Func_impl_no_alloc@V<lambda_359ef47aa51528181330902119fa1007>@@_NH@std@@",
+   "td_rva": 115347104,
+   "col_rva": 108476352,
+   "vftables": [
+    "0x1467737c0"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_3bbe68698a13db4865525d653972cef9>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_3bbe68698a13db4865525d653972cef9>@@@?$Function@$$A6AXV?$Result@V?$shared_ptr@VHttpCall@services@xbox@@@std@@@services@xbox@@@Z@services@xbox@@",
+   "td_rva": 115358608,
+   "col_rva": 108489720,
+   "vftables": [
+    "0x146776bf8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_3ce5df2d6c588c5f4ed510e957083a64>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_3ce5df2d6c588c5f4ed510e957083a64>@@@?$Function@$$A6AXV?$Result@V?$vector@VPermissionCheckResult@privacy@services@xbox@@U?$Allocator@VPermissionCheckResult@privacy@services@xbox@@@34@@std@@@services@xbox@@@Z@services@xbox@@",
+   "td_rva": 115343456,
+   "col_rva": 108472464,
+   "vftables": [
+    "0x146772890"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_53fd2ceff4d06ef12724e1dba7fc6525>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_53fd2ceff4d06ef12724e1dba7fc6525>@@@?$Function@$$A6AXV?$Result@X@services@xbox@@@Z@services@xbox@@",
+   "td_rva": 115361136,
+   "col_rva": 108493032,
+   "vftables": [
+    "0x1467778e8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_5684e66f43f82214d86e325f4edf3f04>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_5684e66f43f82214d86e325f4edf3f04>@@@?$Function@$$A6AXV?$Result@V?$shared_ptr@VHttpCall@services@xbox@@@std@@@services@xbox@@@Z@services@xbox@@",
+   "td_rva": 115359088,
+   "col_rva": 108490104,
+   "vftables": [
+    "0x146776d78"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_588c1e780597e442d81372824241c347>::?$_Func_impl_no_alloc",
+   "mangled": ".?AV?$_Func_impl_no_alloc@V<lambda_588c1e780597e442d81372824241c347>@@_NH@std@@",
+   "td_rva": 115358992,
+   "col_rva": 108489976,
+   "vftables": [
+    "0x146776cf8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_6df93bc849ff056cd66b493bc0560e63>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_6df93bc849ff056cd66b493bc0560e63>@@@?$Function@$$A6AJW4XAsyncOp@@PEBUXAsyncProviderData@@@Z@services@xbox@@",
+   "td_rva": 115343296,
+   "col_rva": 108472336,
+   "vftables": [
+    "0x146772810"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_76fbc518bfd8d29ca97dca6795a3e103>::?$_Func_impl_no_alloc",
+   "mangled": ".?AV?$_Func_impl_no_alloc@V<lambda_76fbc518bfd8d29ca97dca6795a3e103>@@_NH@std@@",
+   "td_rva": 115347200,
+   "col_rva": 108476480,
+   "vftables": [
+    "0x146773840"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_7bf4d3843f8366a2e6f165cb006a1325>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_7bf4d3843f8366a2e6f165cb006a1325>@@@?$Function@$$A6AXV?$Result@VPermissionCheckResult@privacy@services@xbox@@@services@xbox@@@Z@services@xbox@@",
+   "td_rva": 115358416,
+   "col_rva": 108489592,
+   "vftables": [
+    "0x146776b78"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_803c469c1b21e8bb8bb2fdb74c60d75b>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_803c469c1b21e8bb8bb2fdb74c60d75b>@@@?$Function@$$A6AXV?$Result@V?$shared_ptr@VHttpCall@services@xbox@@@std@@@services@xbox@@@Z@services@xbox@@",
+   "td_rva": 115345168,
+   "col_rva": 108473632,
+   "vftables": [
+    "0x146772d20"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_8136ec0144be1f47fccfc971a526ea64>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_8136ec0144be1f47fccfc971a526ea64>@@@?$Function@$$A6AXV?$Result@V?$shared_ptr@UXblPresenceRecord@@@std@@@services@xbox@@@Z@services@xbox@@",
+   "td_rva": 115344400,
+   "col_rva": 108473136,
+   "vftables": [
+    "0x146772b30"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_81adc9bd00e9d491cf5d17484773fa1e>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_81adc9bd00e9d491cf5d17484773fa1e>@@@?$Function@$$A6AJW4XAsyncOp@@PEBUXAsyncProviderData@@@Z@services@xbox@@",
+   "td_rva": 115342576,
+   "col_rva": 108471920,
+   "vftables": [
+    "0x146772670"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_8735211844e0a6237b135a810fc0395c>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_8735211844e0a6237b135a810fc0395c>@@@?$Function@$$A6AXV?$Result@V?$shared_ptr@VHttpCall@services@xbox@@@std@@@services@xbox@@@Z@services@xbox@@",
+   "td_rva": 115357408,
+   "col_rva": 108488392,
+   "vftables": [
+    "0x1467766c8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_8b57539ed3e64b18f85ab332df2d685e>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_8b57539ed3e64b18f85ab332df2d685e>@@@?$Function@$$A6AXV?$Result@UTokenAndSignature@services@xbox@@@services@xbox@@@Z@services@xbox@@",
+   "td_rva": 115360496,
+   "col_rva": 108492072,
+   "vftables": [
+    "0x146777528"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_a3ff9c9fa02606235146435ff50d1733>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_a3ff9c9fa02606235146435ff50d1733>@@@?$Function@$$A6AXXZ@services@xbox@@",
+   "td_rva": 115361888,
+   "col_rva": 108493904,
+   "vftables": [
+    "0x146777c50"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_a85a3a22694d7ad0efcb989a7abbe991>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_a85a3a22694d7ad0efcb989a7abbe991>@@@?$Function@$$A6AXJ@Z@services@xbox@@",
+   "td_rva": 115343968,
+   "col_rva": 108472800,
+   "vftables": [
+    "0x1467729e0"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_a8c409b4d4f56e9438a0c09cb5cccf92>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_a8c409b4d4f56e9438a0c09cb5cccf92>@@@?$Function@$$A6AXV?$Result@VPermissionCheckResult@privacy@services@xbox@@@services@xbox@@@Z@services@xbox@@",
+   "td_rva": 115343104,
+   "col_rva": 108472208,
+   "vftables": [
+    "0x146772790"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_b055d90cf710ea1d2e2aac5e28438688>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_b055d90cf710ea1d2e2aac5e28438688>@@@?$Function@$$A6AXV?$Result@V?$shared_ptr@VHttpCall@services@xbox@@@std@@@services@xbox@@@Z@services@xbox@@",
+   "td_rva": 115359280,
+   "col_rva": 108490232,
+   "vftables": [
+    "0x146776df8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_b4e24e3356f6416cba39225e9f28c7f4>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_b4e24e3356f6416cba39225e9f28c7f4>@@@?$Function@$$A6AJW4XAsyncOp@@PEBUXAsyncProviderData@@@Z@services@xbox@@",
+   "td_rva": 115344592,
+   "col_rva": 108473264,
+   "vftables": [
+    "0x146772bb0"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_b7e353d7dbc391bb6ad8222fac218d71>::?$_Func_impl_no_alloc",
+   "mangled": ".?AV?$_Func_impl_no_alloc@V<lambda_b7e353d7dbc391bb6ad8222fac218d71>@@_NH@std@@",
+   "td_rva": 115357888,
+   "col_rva": 108488776,
+   "vftables": [
+    "0x146776848"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_b978437578533bb8c77a3b76b187db3b>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_b978437578533bb8c77a3b76b187db3b>@@@?$Function@$$A6AJW4XAsyncOp@@PEBUXAsyncProviderData@@@Z@services@xbox@@",
+   "td_rva": 115344240,
+   "col_rva": 108473008,
+   "vftables": [
+    "0x146772ab0"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_bb2f881dd06922d2e9f1ba582fe84c84>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_bb2f881dd06922d2e9f1ba582fe84c84>@@@?$Function@$$A6AXV?$Result@V?$shared_ptr@UXblAchievementsResult@@@std@@@services@xbox@@@Z@services@xbox@@",
+   "td_rva": 115342224,
+   "col_rva": 108471664,
+   "vftables": [
+    "0x146772570"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_c2369676501783f3ebca59fd133b7a20>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_c2369676501783f3ebca59fd133b7a20>@@@?$Function@$$A6AXV?$Result@V?$shared_ptr@VHttpCall@services@xbox@@@std@@@services@xbox@@@Z@services@xbox@@",
+   "td_rva": 115358800,
+   "col_rva": 108489848,
+   "vftables": [
+    "0x146776c78"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_c49f60bab06b3b54b87ba4a42caeb6a5>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_c49f60bab06b3b54b87ba4a42caeb6a5>@@@?$Function@$$A6AXV?$Result@V?$shared_ptr@VHttpCall@services@xbox@@@std@@@services@xbox@@@Z@services@xbox@@",
+   "td_rva": 115360304,
+   "col_rva": 108491944,
+   "vftables": [
+    "0x1467774a8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_c6ee7d5b9d42ed46acad3c312369f9e5>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_c6ee7d5b9d42ed46acad3c312369f9e5>@@@?$Function@$$A6AXXZ@services@xbox@@",
+   "td_rva": 115363200,
+   "col_rva": 108494896,
+   "vftables": [
+    "0x146778030"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_d215991f55d4883693a850263dff1c7e>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_d215991f55d4883693a850263dff1c7e>@@@?$Function@$$A6AXV?$Result@V?$shared_ptr@VHttpCall@services@xbox@@@std@@@services@xbox@@@Z@services@xbox@@",
+   "td_rva": 115361504,
+   "col_rva": 108493648,
+   "vftables": [
+    "0x146777b50"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_d8e0c432a1eb080044e497a99447aa7f>::?$_Func_impl_no_alloc",
+   "mangled": ".?AV?$_Func_impl_no_alloc@V<lambda_d8e0c432a1eb080044e497a99447aa7f>@@_NH@std@@",
+   "td_rva": 115357792,
+   "col_rva": 108488648,
+   "vftables": [
+    "0x1467767c8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_da303973239aaace1b27ff4533a82fec>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_da303973239aaace1b27ff4533a82fec>@@@?$Function@$$A6AJW4XAsyncOp@@PEBUXAsyncProviderData@@@Z@services@xbox@@",
+   "td_rva": 115342416,
+   "col_rva": 108471792,
+   "vftables": [
+    "0x1467725f0"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_da73231719bbe8c759a15c97f44594dc>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_da73231719bbe8c759a15c97f44594dc>@@@?$Function@$$A6AXV?$Result@X@services@xbox@@@Z@services@xbox@@",
+   "td_rva": 115341824,
+   "col_rva": 108471376,
+   "vftables": [
+    "0x146772450"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_e940db856a702b3aec76189f55c49efa>::?$_Func_impl_no_alloc",
+   "mangled": ".?AV?$_Func_impl_no_alloc@V<lambda_e940db856a702b3aec76189f55c49efa>@@_NH@std@@",
+   "td_rva": 115360768,
+   "col_rva": 108492456,
+   "vftables": [
+    "0x1467776a8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_ed524a252c95b42b01535971dc6cdb04>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_ed524a252c95b42b01535971dc6cdb04>@@@?$Function@$$A6AJW4XAsyncOp@@PEBUXAsyncProviderData@@@Z@services@xbox@@",
+   "td_rva": 115345616,
+   "col_rva": 108473888,
+   "vftables": [
+    "0x146772e20"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "V<lambda_fe42a53bceb03d3770e0bbb55859d7f9>::U?$Callable",
+   "mangled": ".?AU?$Callable@V<lambda_fe42a53bceb03d3770e0bbb55859d7f9>@@@?$Function@$$A6AXV?$Result@V?$vector@VVerifyStringResult@system@services@xbox@@U?$Allocator@VVerifyStringResult@system@services@xbox@@@34@@std@@@services@xbox@@@Z@services@xbox@@",
+   "td_rva": 115345360,
+   "col_rva": 108473760,
+   "vftables": [
+    "0x146772da0"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "std::D::DU?$char_traits::?$basic_filebuf",
+   "mangled": ".?AV?$basic_filebuf@DU?$char_traits@D@std@@@std@@",
+   "td_rva": 115346784,
+   "col_rva": 108475840,
+   "vftables": [
+    "0x1467735c0"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "std::D::DU?$char_traits::?$basic_stringbuf",
+   "mangled": ".?AV?$basic_stringbuf@DU?$char_traits@D@std@@U?$Allocator@D@services@xbox@@@std@@",
+   "td_rva": 115341536,
+   "col_rva": 108470960,
+   "vftables": [
+    "0x1467722b0"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "std::_Generic_error_category",
+   "mangled": ".?AV_Generic_error_category@std@@",
+   "td_rva": 115346664,
+   "col_rva": 108475584,
+   "vftables": [
+    "0x1467734c0"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "std::_System_error",
+   "mangled": ".?AV_System_error@std@@",
+   "td_rva": 115340208,
+   "col_rva": 108476608,
+   "vftables": [
+    "0x1467738c0"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "std::_System_error_category",
+   "mangled": ".?AV_System_error_category@std@@",
+   "td_rva": 115346720,
+   "col_rva": 108475712,
+   "vftables": [
+    "0x146773540"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "std::_W::_WU?$char_traits::?$basic_stringbuf",
+   "mangled": ".?AV?$basic_stringbuf@_WU?$char_traits@_W@std@@V?$allocator@_W@2@@std@@",
+   "td_rva": 115346048,
+   "col_rva": 108474448,
+   "vftables": [
+    "0x146773050"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "std::bad_weak_ptr",
+   "mangled": ".?AVbad_weak_ptr@std@@",
+   "td_rva": 115339568,
+   "col_rva": 108471168,
+   "vftables": [
+    "0x146772380"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "std::range_error",
+   "mangled": ".?AVrange_error@std@@",
+   "td_rva": 115339608,
+   "col_rva": 108491048,
+   "vftables": [
+    "0x146777128"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "std::runtime_error",
+   "mangled": ".?AVruntime_error@std@@",
+   "td_rva": 115339648,
+   "col_rva": 108475376,
+   "vftables": [
+    "0x1467733f0"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "std::system_error",
+   "mangled": ".?AVsystem_error@std@@",
+   "td_rva": 115339688,
+   "col_rva": 108476744,
+   "vftables": [
+    "0x146773948"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "type_info",
+   "mangled": ".?AVtype_info@@",
+   "td_rva": 115341000,
+   "col_rva": 108469752,
+   "vftables": [
+    "0x146771df8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::GlobalState",
+   "mangled": ".?AVGlobalState@services@xbox@@",
+   "td_rva": 115347344,
+   "col_rva": 108476968,
+   "vftables": [
+    "0x146773a28"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::HttpCall",
+   "mangled": ".?AVHttpCall@services@xbox@@",
+   "td_rva": 115340592,
+   "col_rva": 108491824,
+   "vftables": [
+    "0x146777430"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::PEAVGlobalState::?$_Ref_count_resource_alloc",
+   "mangled": ".?AV?$_Ref_count_resource_alloc@PEAVGlobalState@services@xbox@@U?$Deleter@VGlobalState@services@xbox@@@23@U?$Allocator@VGlobalState@services@xbox@@@23@@std@@",
+   "td_rva": 115350592,
+   "col_rva": 108480888,
+   "vftables": [
+    "0x146774978"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::VAppConfig::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@VAppConfig@services@xbox@@U?$Allocator@VAppConfig@services@xbox@@@23@@std@@",
+   "td_rva": 115349648,
+   "col_rva": 108479592,
+   "vftables": [
+    "0x146774468"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::VXboxLiveContextSettings::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@VXboxLiveContextSettings@services@xbox@@U?$Allocator@VXboxLiveContextSettings@services@xbox@@@23@@std@@",
+   "td_rva": 115351040,
+   "col_rva": 108481400,
+   "vftables": [
+    "0x146774b78"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::Vlog_hc_output::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@Vlog_hc_output@services@xbox@@U?$Allocator@Vlog_hc_output@services@xbox@@@23@@std@@",
+   "td_rva": 115350272,
+   "col_rva": 108480456,
+   "vftables": [
+    "0x1467747c8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::Vlogger::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@Vlogger@services@xbox@@U?$Allocator@Vlogger@services@xbox@@@23@@std@@",
+   "td_rva": 115349968,
+   "col_rva": 108480024,
+   "vftables": [
+    "0x146774618"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::achievements::VAchievementsService::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@VAchievementsService@achievements@services@xbox@@U?$Allocator@VAchievementsService@achievements@services@xbox@@@34@@std@@",
+   "td_rva": 115351408,
+   "col_rva": 108481832,
+   "vftables": [
+    "0x146774d28"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::achievements::manager::VAchievementsManager::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@VAchievementsManager@manager@achievements@services@xbox@@U?$Allocator@VAchievementsManager@manager@achievements@services@xbox@@@45@@std@@",
+   "td_rva": 115347584,
+   "col_rva": 108477432,
+   "vftables": [
+    "0x146773bf8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::cppresturi::utility::details::windows_category_impl",
+   "mangled": ".?AVwindows_category_impl@details@utility@cppresturi@services@xbox@@",
+   "td_rva": 115360000,
+   "col_rva": 108491336,
+   "vftables": [
+    "0x146777248"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::events::EventsService",
+   "mangled": ".?AVEventsService@events@services@xbox@@",
+   "td_rva": 115361344,
+   "col_rva": 108493240,
+   "vftables": [
+    "0x1467779b8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::events::VEventsService::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@VEventsService@events@services@xbox@@U?$Allocator@VEventsService@events@services@xbox@@@34@@std@@",
+   "td_rva": 115356976,
+   "col_rva": 108487880,
+   "vftables": [
+    "0x1467764c8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::leaderboard::VLeaderboardService::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@VLeaderboardService@leaderboard@services@xbox@@U?$Allocator@VLeaderboardService@leaderboard@services@xbox@@@34@@std@@",
+   "td_rva": 115355280,
+   "col_rva": 108486152,
+   "vftables": [
+    "0x146775e08"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::legacy::xbox_services_error_code_category_impl",
+   "mangled": ".?AVxbox_services_error_code_category_impl@legacy@services@xbox@@",
+   "td_rva": 115360864,
+   "col_rva": 108492584,
+   "vftables": [
+    "0x146777728"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::legacy::xbox_services_error_condition_category_impl",
+   "mangled": ".?AVxbox_services_error_condition_category_impl@legacy@services@xbox@@",
+   "td_rva": 115360960,
+   "col_rva": 108492712,
+   "vftables": [
+    "0x1467777a8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::log_hc_output",
+   "mangled": ".?AVlog_hc_output@services@xbox@@",
+   "td_rva": 115347480,
+   "col_rva": 108477224,
+   "vftables": [
+    "0x146773b28"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::log_output",
+   "mangled": ".?AVlog_output@services@xbox@@",
+   "td_rva": 115347536,
+   "col_rva": 108492840,
+   "vftables": [
+    "0x146777828"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::matchmaking::VMatchmakingService::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@VMatchmakingService@matchmaking@services@xbox@@U?$Allocator@VMatchmakingService@matchmaking@services@xbox@@@34@@std@@",
+   "td_rva": 115355680,
+   "col_rva": 108486584,
+   "vftables": [
+    "0x146775fb8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::multiplayer::VMultiplayerService::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@VMultiplayerService@multiplayer@services@xbox@@U?$Allocator@VMultiplayerService@multiplayer@services@xbox@@@34@@std@@",
+   "td_rva": 115353648,
+   "col_rva": 108484424,
+   "vftables": [
+    "0x146775748"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::multiplayer::manager::VMultiplayerManager::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@VMultiplayerManager@manager@multiplayer@services@xbox@@U?$Allocator@VMultiplayerManager@manager@multiplayer@services@xbox@@@45@@std@@",
+   "td_rva": 115348032,
+   "col_rva": 108477864,
+   "vftables": [
+    "0x146773da8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::multiplayer_activity::MultiplayerActivityService::?1??FlushRecentPlayers::ServiceCall",
+   "mangled": ".?AVServiceCall@?1??FlushRecentPlayers@MultiplayerActivityService@multiplayer_activity@services@xbox@@QEAAJ$$QEAV?$AsyncContext@V?$Result@X@services@xbox@@@45@@Z@",
+   "td_rva": 115340816,
+   "col_rva": 108493496,
+   "vftables": [
+    "0x146777ab8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::multiplayer_activity::MultiplayerActivityService::?1??FlushRecentPlayers::VServiceCall::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@VServiceCall@?1??FlushRecentPlayers@MultiplayerActivityService@multiplayer_activity@services@xbox@@QEAAJ$$QEAV?$AsyncContext@V?$Result@X@services@xbox@@@56@@Z@U?$Allocator@VServiceCall@?1??FlushRecentPlayers@MultiplayerActivityService@multiplayer_activity@services@xbox@@QEAAJ$$QEAV?$AsyncContext@V?$Result@X@services@xbox@@@56@@Z@@56@@std@@",
+   "td_rva": 115362000,
+   "col_rva": 108494032,
+   "vftables": [
+    "0x146777cd0"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::multiplayer_activity::VMultiplayerActivityService::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@VMultiplayerActivityService@multiplayer_activity@services@xbox@@U?$Allocator@VMultiplayerActivityService@multiplayer_activity@services@xbox@@@34@@std@@",
+   "td_rva": 115356496,
+   "col_rva": 108487448,
+   "vftables": [
+    "0x146776318"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::presence::VDeviceRecord::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@VDeviceRecord@presence@services@xbox@@U?$Allocator@VDeviceRecord@presence@services@xbox@@@34@@std@@",
+   "td_rva": 115362848,
+   "col_rva": 108494464,
+   "vftables": [
+    "0x146777e80"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::presence::VPresenceService::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@VPresenceService@presence@services@xbox@@U?$Allocator@VPresenceService@presence@services@xbox@@@34@@std@@",
+   "td_rva": 115352560,
+   "col_rva": 108483128,
+   "vftables": [
+    "0x146775238"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::privacy::VPrivacyService::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@VPrivacyService@privacy@services@xbox@@U?$Allocator@VPrivacyService@privacy@services@xbox@@@34@@std@@",
+   "td_rva": 115354048,
+   "col_rva": 108484856,
+   "vftables": [
+    "0x1467758f8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::real_time_activity::VRealTimeActivityManager::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@VRealTimeActivityManager@real_time_activity@services@xbox@@U?$Allocator@VRealTimeActivityManager@real_time_activity@services@xbox@@@34@@std@@",
+   "td_rva": 115348848,
+   "col_rva": 108478728,
+   "vftables": [
+    "0x146774108"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::social::VProfileService::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@VProfileService@social@services@xbox@@U?$Allocator@VProfileService@social@services@xbox@@@34@@std@@",
+   "td_rva": 115351824,
+   "col_rva": 108482264,
+   "vftables": [
+    "0x146774ed8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::social::VReputationService::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@VReputationService@social@services@xbox@@U?$Allocator@VReputationService@social@services@xbox@@@34@@std@@",
+   "td_rva": 115352176,
+   "col_rva": 108482696,
+   "vftables": [
+    "0x146775088"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::social::VSocialService::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@VSocialService@social@services@xbox@@U?$Allocator@VSocialService@social@services@xbox@@@34@@std@@",
+   "td_rva": 115352944,
+   "col_rva": 108483560,
+   "vftables": [
+    "0x1467753e8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::social::manager::VSocialManager::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@VSocialManager@manager@social@services@xbox@@U?$Allocator@VSocialManager@manager@social@services@xbox@@@45@@std@@",
+   "td_rva": 115348464,
+   "col_rva": 108478296,
+   "vftables": [
+    "0x146773f58"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::system::VLocalStorage::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@VLocalStorage@system@services@xbox@@U?$Allocator@VLocalStorage@system@services@xbox@@@34@@std@@",
+   "td_rva": 115349296,
+   "col_rva": 108479160,
+   "vftables": [
+    "0x1467742b8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::system::VStringService::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@VStringService@system@services@xbox@@U?$Allocator@VStringService@system@services@xbox@@@34@@std@@",
+   "td_rva": 115353296,
+   "col_rva": 108483992,
+   "vftables": [
+    "0x146775598"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::title_storage::VTitleStorageService::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@VTitleStorageService@title_storage@services@xbox@@U?$Allocator@VTitleStorageService@title_storage@services@xbox@@@34@@std@@",
+   "td_rva": 115356080,
+   "col_rva": 108487016,
+   "vftables": [
+    "0x146776168"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::uri_exception",
+   "mangled": ".?AVuri_exception@services@xbox@@",
+   "td_rva": 115339992,
+   "col_rva": 108492200,
+   "vftables": [
+    "0x1467775a8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::user_statistics::VTitleManagedStatisticsService::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@VTitleManagedStatisticsService@user_statistics@services@xbox@@U?$Allocator@VTitleManagedStatisticsService@user_statistics@services@xbox@@@34@@std@@",
+   "td_rva": 115354416,
+   "col_rva": 108485288,
+   "vftables": [
+    "0x146775aa8"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  },
+  {
+   "name": "xbox::services::user_statistics::VUserStatisticsService::?$_Ref_count_obj_alloc3",
+   "mangled": ".?AV?$_Ref_count_obj_alloc3@VUserStatisticsService@user_statistics@services@xbox@@U?$Allocator@VUserStatisticsService@user_statistics@services@xbox@@@34@@std@@",
+   "td_rva": 115354864,
+   "col_rva": 108485720,
+   "vftables": [
+    "0x146775c58"
+   ],
+   "base_count": 0,
+   "direct_bases": []
+  }
+ ]
+}
