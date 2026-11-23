@@ -28,6 +28,7 @@ std::string lower(std::string s) {
 std::mutex g_logMutex;
 std::vector<std::string>* g_names = nullptr;
 uint64_t g_callLimit = 0;
+bool g_traceStubs = false;
 
 }  // namespace
 
@@ -143,8 +144,10 @@ void* Imports::makeStub(uint64_t id, const std::string& dll, const std::string& 
     memcpy(p + 17, &id, 8);
     void* target = reinterpret_cast<void*>(&Gta6ShimCall);
     memcpy(p + 30, &target, 8);
-    printf("[stub-alloc] %s -> %p (id=%llu)\n", (dll + "!" + name).c_str(), p,
-           static_cast<unsigned long long>(id));
+    if (g_traceStubs) {
+        printf("[stub-alloc] %s -> %p (id=%llu)\n", (dll + "!" + name).c_str(), p,
+               static_cast<unsigned long long>(id));
+    }
     FlushInstructionCache(GetCurrentProcess(), p, stubSize);
     return p;
 }
@@ -164,6 +167,7 @@ std::string Imports::describeTarget(uintptr_t target) const {
 }
 
 bool Imports::bind(PeImage& image, const std::string& gameDir, bool verbose, std::string& error) {
+    g_traceStubs = verbose;
     gameDir_ = gameDir;
     const uint32_t importRva = image.directoryRva(IMAGE_DIRECTORY_ENTRY_IMPORT);
     const uint32_t importSize = image.directorySize(IMAGE_DIRECTORY_ENTRY_IMPORT);

@@ -3,6 +3,7 @@
 
 #include <windows.h>
 #include <cstdio>
+#include <cstdarg>
 #include <cstring>
 #include <string>
 
@@ -125,8 +126,29 @@ bool setupTls(PeImage& image) {
 
 int g_faultLogBudget = 6;
 
+HANDLE g_faultFile = INVALID_HANDLE_VALUE;
+
+void faultLog(const char* fmt, ...) {
+    if (g_faultFile == INVALID_HANDLE_VALUE) return;
+    char buf[512];
+    va_list args;
+    va_start(args, fmt);
+    int n = vsnprintf(buf, sizeof buf - 2, fmt, args);
+    va_end(args);
+    if (n < 0) return;
+    if (n > static_cast<int>(sizeof buf) - 2) n = sizeof buf - 2;
+    buf[n++] = '\n';
+    DWORD written = 0;
+    WriteFile(g_faultFile, buf, static_cast<DWORD>(n), &written, nullptr);
+}
+
 LONG CALLBACK firstChanceHandler(EXCEPTION_POINTERS* info) {
-    if (g_faultLogBudget <= 0) return EXCEPTION_CONTINUE_SEARCH;
+    static LONG busy = 0;
+    if (InterlockedExchange(&busy, 1)) return EXCEPTION_CONTINUE_SEARCH;
+    if (g_faultLogBudget <= 0) {
+        busy = 0;
+        return EXCEPTION_CONTINUE_SEARCH;
+    }
     const auto* rec = info->ExceptionRecord;
     if (rec->ExceptionCode != EXCEPTION_ACCESS_VIOLATION &&
         rec->ExceptionCode != EXCEPTION_ILLEGAL_INSTRUCTION &&
@@ -135,46 +157,24 @@ LONG CALLBACK firstChanceHandler(EXCEPTION_POINTERS* info) {
     }
     --g_faultLogBudget;
     const auto* ctx = info->ContextRecord;
-    printf("[first-chance] code=0x%08lX rip=%p", rec->ExceptionCode,
-           reinterpret_cast<void*>(ctx->Rip));
-    if (g_image) printf(" (%s)", g_image->describeAddress(ctx->Rip).c_str());
-    if (rec->NumberParameters >= 2) {
-        printf(" %s %p", rec->ExceptionInformation[0] ? "write" : "read",
-               reinterpret_cast<void*>(rec->ExceptionInformation[1]));
-        MEMORY_BASIC_INFORMATION mbi2{};
-        VirtualQuery(reinterpret_cast<void*>(rec->ExceptionInformation[1]), &mbi2, sizeof mbi2);
-        printf(" [region %p state=0x%lX protect=0x%lX size=%zu]", mbi2.BaseAddress,
-               static_cast<unsigned long>(mbi2.State),
-               static_cast<unsigned long>(mbi2.Protect), static_cast<size_t>(mbi2.RegionSize));
+    char where[160] = "outside image";
+    if (g_image) {
+        const std::string d = g_image->describeAddress(ctx->Rip);
+        strncpy_s(where, sizeof where, d.c_str(), _TRUNCATE);
     }
-    printf("\n");
-    if (g_watchIat) {
-        const uint64_t slot = *reinterpret_cast<const uint64_t*>(g_watchIat);
-        printf("[first-chance] watch iat=%p value=%p calls=%llu\n",
-               reinterpret_cast<void*>(g_watchIat), reinterpret_cast<void*>(slot),
-               static_cast<unsigned long long>(g_shimCalls));
-        const uint8_t* stub = reinterpret_cast<const uint8_t*>(static_cast<uintptr_t>(slot));
-        printf("[first-chance] stub bytes:");
-        for (int i = 0; i < 44; ++i) printf(" %02X", stub[i]);
-        printf("\n");
-    }
-    if (rec->ExceptionCode == EXCEPTION_ACCESS_VIOLATION) {
-        MEMORY_BASIC_INFORMATION mbi{};
-        VirtualQuery(reinterpret_cast<void*>(ctx->Rip), &mbi, sizeof mbi);
-        printf("[first-chance] rip region base=%p state=0x%lX protect=0x%lX type=0x%lX size=%zu\n",
-               mbi.BaseAddress, static_cast<unsigned long>(mbi.State),
-               static_cast<unsigned long>(mbi.Protect), static_cast<unsigned long>(mbi.Type),
-               static_cast<size_t>(mbi.RegionSize));
-        const uint8_t* code = reinterpret_cast<const uint8_t*>(ctx->Rip);
-        printf("[first-chance] code:");
-        for (int i = 0; i < 12; ++i) printf(" %02X", code[i]);
-        printf("\n");
-        const uint64_t* stack = reinterpret_cast<const uint64_t*>(ctx->Rsp);
-        printf("[first-chance] stack:");
-        for (int i = 0; i < 4; ++i) printf(" %llX", static_cast<unsigned long long>(stack[i]));
-        printf("\n");
-    }
+    unsigned long long arg = 0;
+    if (rec->NumberParameters >= 2) arg = rec->ExceptionInformation[1];
+    faultLog("[fault] code=0x%08lX rip=%p (%s) arg=%p", rec->ExceptionCode,
+             reinterpret_cast<void*>(ctx->Rip), where, reinterpret_cast<void*>(arg));
+    const uint64_t* stack = reinterpret_cast<const uint64_t*>(ctx->Rsp);
+    faultLog("[fault] stack: %llX %llX %llX %llX, last shim %s, calls=%llu",
+             static_cast<unsigned long long>(stack[0]),
+             static_cast<unsigned long long>(stack[1]),
+             static_cast<unsigned long long>(stack[2]),
+             static_cast<unsigned long long>(stack[3]),
+             g_lastShimName ? g_lastShimName : "?", static_cast<unsigned long long>(g_shimCalls));
     fflush(stdout);
+    busy = 0;
     return EXCEPTION_CONTINUE_SEARCH;
 }
 
@@ -299,6 +299,8 @@ int main(int argc, char** argv) {
     printf("[run] calling entry %p ...\n", reinterpret_cast<void*>(entry));
     fflush(stdout);
 
+    g_faultFile = CreateFileA("gta6rt-faults.log", GENERIC_WRITE, FILE_SHARE_READ, nullptr,
+                              CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, nullptr);
     SetUnhandledExceptionFilter(faultHandler);
     AddVectoredExceptionHandler(1, firstChanceHandler);
     runEntry(image.base() + image.entryPoint());
