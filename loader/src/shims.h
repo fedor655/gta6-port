@@ -7,10 +7,16 @@
 class PeImage;
 
 enum class BindingKind {
-    Real,      // resolved from a real Windows DLL
+    Real,      // trace thunk: logs the call, then jumps to the real function
     Stub,      // generated thunk that logs and returns 0
     XboxDll,   // Xbox-only DLL that we cannot LoadLibrary; all imports stubbed
+    Handler,   // our own implementation (CreateThread and friends)
 };
+
+// Hands the main-thread TLS state to the shims so newly created threads get
+// the same block installed into their TEB.
+void shimSetTlsState(unsigned long slot, void* block, size_t blockSize,
+                     const void* templateSrc, size_t templateSize);
 
 struct ImportBinding {
     std::string dll;
@@ -33,6 +39,8 @@ public:
 
 private:
     void* makeStub(uint64_t id, const std::string& dll, const std::string& name);
+    void* makeTraceStub(uint64_t id, const std::string& dll, const std::string& name,
+                        void* realTarget);
     std::vector<ImportBinding> bindings_;
     std::string gameDir_;
 };

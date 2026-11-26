@@ -116,6 +116,8 @@ bool setupTls(PeImage& image) {
     if (slot < 64) {
         if (teb->tlsArray) teb->tlsArray[slot] = block;
         teb->tlsSlots[slot] = block;
+        shimSetTlsState(slot, block, blockSize, reinterpret_cast<const void*>(tls->StartAddressOfRawData),
+                        templateSize);
         printf("[tls] slot %lu installed (array %p, block %p)\n",
                static_cast<unsigned long>(slot), static_cast<void*>(teb->tlsArray), block);
     } else {
@@ -164,8 +166,12 @@ LONG CALLBACK firstChanceHandler(EXCEPTION_POINTERS* info) {
     }
     unsigned long long arg = 0;
     if (rec->NumberParameters >= 2) arg = rec->ExceptionInformation[1];
-    faultLog("[fault] code=0x%08lX rip=%p (%s) arg=%p", rec->ExceptionCode,
-             reinterpret_cast<void*>(ctx->Rip), where, reinterpret_cast<void*>(arg));
+    faultLog("[fault] code=0x%08lX rip=%p (%s) nparams=%u p0=%p p1=%p rsp=%p",
+             rec->ExceptionCode, reinterpret_cast<void*>(ctx->Rip), where,
+             static_cast<unsigned>(rec->NumberParameters),
+             rec->NumberParameters ? reinterpret_cast<void*>(rec->ExceptionInformation[0]) : nullptr,
+             rec->NumberParameters > 1 ? reinterpret_cast<void*>(rec->ExceptionInformation[1]) : nullptr,
+             reinterpret_cast<void*>(ctx->Rsp));
     const uint64_t* stack = reinterpret_cast<const uint64_t*>(ctx->Rsp);
     faultLog("[fault] stack: %llX %llX %llX %llX, last shim %s, calls=%llu",
              static_cast<unsigned long long>(stack[0]),
@@ -173,6 +179,25 @@ LONG CALLBACK firstChanceHandler(EXCEPTION_POINTERS* info) {
              static_cast<unsigned long long>(stack[2]),
              static_cast<unsigned long long>(stack[3]),
              g_lastShimName ? g_lastShimName : "?", static_cast<unsigned long long>(g_shimCalls));
+    {
+        HMODULE mod = nullptr;
+        char modName[MAX_PATH] = "?";
+        const char* moduleName = "?";
+        if (GetModuleHandleExA(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS | GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT,
+                               reinterpret_cast<LPCSTR>(ctx->Rip), &mod) && mod) {
+            GetModuleFileNameA(mod, modName, MAX_PATH);
+            moduleName = modName;
+            for (const char* s = modName; *s; ++s) if (*s == '\\' || *s == '/') moduleName = s + 1;
+        }
+        faultLog("[fault] rip module %s, rbp=%p", moduleName, reinterpret_cast<void*>(ctx->Rbp));
+    }
+    const uint8_t* ripBytes = reinterpret_cast<const uint8_t*>(ctx->Rip);
+    char hex[128] = {};
+    size_t pos = 0;
+    for (int i = -12; i < 12; ++i) {
+        pos += static_cast<size_t>(snprintf(hex + pos, sizeof hex - pos, " %02X", ripBytes[i]));
+    }
+    faultLog("[fault] bytes around rip:%s", hex);
     fflush(stdout);
     busy = 0;
     return EXCEPTION_CONTINUE_SEARCH;
